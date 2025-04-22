@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shan-pod
+  labels:
+    app: shan-app
+spec:
+  containers:
+  - name: shan-container
+    image: shan-msg
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 2525
+      name: shan-port 

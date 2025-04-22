@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: shan-sset
+spec:
+  serviceName: shan-svc
+  replicas: 4
+  selector:
+    matchLabels:
+      app: shan-app
+  template:
+    metadata:
+      labels:
+        app: shan-app
+    spec:
+      containers:
+      - name: shan-container
+        image: shan-3b
+        imagePullPolicy: Never
+        command: ["/bin/bash", "-c", "sleep infinity"]
+        ports:
+        - containerPort: 2525
+          name: shan-port 

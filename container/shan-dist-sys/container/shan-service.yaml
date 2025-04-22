@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: shan-svc
+spec:
+  clusterIP: None
+  selector:
+    app: shan-app
+  ports:
+  - port: 2525
+    name: shan-port 
