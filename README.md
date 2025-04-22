@@ -1,14 +1,13 @@
 
-<div align="center">
-
 # Distributed Messaging System
 
+## Overview
 This project implements a distributed messaging system where messages are passed through a chain of servers running in Kubernetes pods. A message originating from a client is passed through server0 → server1 → server2 → server3, with each server forwarding the message to the next one in the chain.
 
+<div align="center">
 <p align="center">
   <img width="351" alt="Screenshot 2025-04-21 at 10 00 39 PM" src="https://github.com/user-attachments/assets/d6c8e9bc-a50b-4b18-84fc-5b02bf71a500" />
 </p>
-
 </div>
 
 ## System Architecture
